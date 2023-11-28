@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import react from "react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {publicRouter} from "~/Routes/routes";
+import {Default_Layout} from "~/commonest/Layout";
+/* const Layout = router.layout === null ? react.Fragment : Default_Layout; */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {publicRouter.map((router, index) => {
+            const Page = router.component;
+            let Layout = Default_Layout;
+            if (router.layout) {
+              Layout = router.layout;
+            } else if (router.layout === null) {
+              Layout = react.Fragment;
+            }
+            return (
+              <Route
+                key={index}
+                path={router.path}
+                element={
+                  <Layout>
+                    <Page></Page>
+                  </Layout>
+                }
+              ></Route>
+            );
+          })}
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
 export default App;
