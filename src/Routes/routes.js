@@ -9,6 +9,7 @@ const publicRouter = [
   {
     path: "/",
     component: Home,
+    layout: Default_Layout,
   },
   {
     path: "/following",
