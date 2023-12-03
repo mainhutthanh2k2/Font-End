@@ -6,10 +6,7 @@ import {
   NavLink,
   NavNavLink,
 } from "react-router-dom";
-// import Home from "~/Pages/Home/home";
-// import images from "~/images/Logo-FPT-Shop-Black.png";
 import styles from "./middle_bar.scss";
-// import Following from "~/Pages/Following/following"
 const Styles = classNames.bind(styles);
 function MiddleBar() {
   return (
