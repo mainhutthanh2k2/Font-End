@@ -1,7 +1,9 @@
 import { useState } from "react";
 import OtpInput from "react-otp-input";
 import { Button, Modal, Form } from "react-bootstrap";
-import { OtpAPI, CustomerAPI } from "~/API";
+import { OtpAPI, CustomerAPI, AuthAPI } from "~/API";
+import { useSelector, useDispatch } from "react-redux";
+import { login, setToken } from "~/store/slice/userSlice";
 
 import img_login from "../../asset/imgs/img-login.png";
 import img_otp from "../../asset/imgs/img-otp.png";
@@ -10,7 +12,12 @@ import "./LoginModal.scss";
 function LoginModal(props) {
     const [otp, setOtp] = useState("");
     const [email, setEmail] = useState("");
+    const [userName, setUserName] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
     const [modalStage, setModalStage] = useState("modalEmail");
+    const user = useSelector((state) => state.user.userInfo);
+    const accessToken = useSelector((state) => state.user.accessToken);
+    const dispatch = useDispatch();
 
     const { showModal, handleCloseModal } = props;
 
@@ -44,7 +51,7 @@ function LoginModal(props) {
                             }
                         }}
                     >
-                        Xác nhận
+                        Tiếp tục
                     </Button>
                 </Modal.Footer>
             </>
@@ -56,10 +63,10 @@ function LoginModal(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <div className="img" style={{ backgroundImage: `url(${img_otp})` }}></div>
-                    <p className="text-center">Mã OTP đã được gửi đến số điện thoại {email || -1}</p>
+                    <p className="text-center">Mã OTP đã được gửi đến email: {email || -1}</p>
                     <span className="text_special" onClick={() => setModalStage(modalStages[0])}>
                         <i className="fa-regular fa-pen-to-square"></i>
-                        Đổi số điện thoại nhận mã
+                        Đổi email nhận mã
                     </span>
                     <OtpInput
                         value={otp}
@@ -71,12 +78,7 @@ function LoginModal(props) {
                     />
                 </Modal.Body>
                 <Modal.Footer style={{ justifyContent: "center" }}>
-                    <Button
-                        variant="danger"
-                        onClick={() => {
-                            if (handleConfirmOTP()) handleSignInOrSignUp();
-                        }}
-                    >
+                    <Button variant="danger" onClick={() => handleConfirmOTP()}>
                         Xác nhận
                     </Button>
                     <span className="text_special" onClick={() => OtpAPI.sendOTP(email)}>
@@ -90,9 +92,31 @@ function LoginModal(props) {
                 <Modal.Header closeButton>
                     <Modal.Title>Thông tin khách hàng</Modal.Title>
                 </Modal.Header>
-                <Modal.Body></Modal.Body>
+                <Modal.Body>
+                    <Form.Group className="form-group">
+                        <Form.Label>Họ tên</Form.Label>
+                        <Form.Control
+                            value={userName}
+                            onChange={(e) => setUserName(e.target.value)}
+                            type="text"
+                            placeholder="Nhập họ tên"
+                        />
+                    </Form.Group>
+                    <Form.Group className="form-group">
+                        <Form.Label>Số điện thoại</Form.Label>
+                        <Form.Control
+                            value={phoneNumber}
+                            onChange={(e) => {
+                                if (+e.target.value || (+e.target.value === 0 && e.target.value.length <= 10))
+                                    setPhoneNumber(e.target.value);
+                            }}
+                            type="text"
+                            placeholder="Nhập số điện thoại"
+                        />
+                    </Form.Group>
+                </Modal.Body>
                 <Modal.Footer style={{ justifyContent: "center" }}>
-                    <Button variant="danger" onClick={handleCloseModal}>
+                    <Button variant="danger" onClick={() => handleSignUp()}>
                         Xác nhận
                     </Button>
                 </Modal.Footer>
@@ -104,8 +128,15 @@ function LoginModal(props) {
         setModalStage(stage);
     };
 
-    const handleConfirmOTP = () => {
-        return OtpAPI.verifyOTP(otp);
+    const handleConfirmOTP = async () => {
+        const res = await OtpAPI.verifyOTP(otp, email);
+
+        if (res.data.status === 0) {
+            handleLogin(res.data.user, res.data.accessToken);
+            handleCloseModal();
+        } else if (res.data.status === 1) {
+            handleSwitchModal(modalStages[2]);
+        }
     };
 
     const handleValidateEmail = (email) => {
@@ -116,15 +147,17 @@ function LoginModal(props) {
             );
     };
 
-    const handleSignInOrSignUp = async () => {
-        const isHaveAccount = await CustomerAPI.getOneUser(email);
-        console.log({ isHaveAccount });
-        if (isHaveAccount) {
-            console.log("Login");
+    const handleLogin = (user, accessToken) => {
+        dispatch(login(user));
+        dispatch(setToken(accessToken));
+    };
+
+    const handleSignUp = async () => {
+        const data = await AuthAPI.signUp({ email, name: userName, phone_number: phoneNumber });
+
+        if (data) {
+            handleLogin(data.user, data.accessToken);
             handleCloseModal();
-        } else {
-            console.log("Sign up");
-            handleSwitchModal(modalStages[2]);
         }
     };
 

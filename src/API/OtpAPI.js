@@ -15,15 +15,11 @@ const OtpAPI = {
             return false;
         }
     },
-    verifyOTP: async (otp) => {
+    verifyOTP: async (otp, email) => {
         try {
-            const res = await axios.get(`/verify-otp?otp=${otp}`);
+            const res = await axios.get(`/verify-otp?otp=${otp}&email=${email}`);
 
-            if (res.status === 0) {
-                return true;
-            }
-
-            return false;
+            return res;
         } catch (err) {
             console.log(err);
             return false;

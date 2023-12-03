@@ -2,6 +2,8 @@ import React from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 import LoginModal from "~/commonest/modals/LoginModal";
+import { useSelector } from "react-redux";
+import _ from "lodash";
 
 import "tippy.js/dist/tippy.css"; // optional
 import style from "./style_header.scss";
@@ -13,6 +15,7 @@ function Header() {
     const [search, set_count] = React.useState("");
     const [searchs, set_counts] = React.useState(get_localStorage);
     const [showModal, setShowModal] = React.useState(false);
+    const user = useSelector((state) => state.user.userInfo);
 
     const handleCloseModal = () => setShowModal(false);
     const handleShowModal = () => setShowModal(true);
@@ -30,7 +33,7 @@ function Header() {
     const handleModalLogin = (e) => {
         e.preventDefault();
     };
-
+    console.log({ user });
     return (
         <header className={Styles("header_web_fpt")}>
             <div className={Styles("header_web_fpt_one")}>
@@ -120,11 +123,13 @@ function Header() {
                                 href=""
                                 onClick={(e) => {
                                     handleModalLogin(e);
-                                    handleShowModal();
+                                    if (_.isEmpty(user)) {
+                                        handleShowModal();
+                                    }
                                 }}
                             >
                                 <i class="fas fa-user-circle icon"></i>
-                                <p> Tài khoản của tôi</p>
+                                <p> {user?.name || "Tài khoản của tôi"}</p>
                             </a>
                         </li>
                         <li>
