@@ -108,7 +108,7 @@ li {
   animation-name: example;
   animation-duration: 0.5s;
   background: white;
-  margin-top: -8px;
+  margin-top: -9px;
   border: solid 1px #d3d3d3;
   z-index: 200;
 }
@@ -124,7 +124,7 @@ li {
     top: 100px;
   }
   100% {
-    top: 5px;
+    top: 50px;
     top: 52x;
   }
 }
@@ -167,6 +167,10 @@ a {
 // tippy
 .result_search {
   min-width: 522px;
+  scroll-margin-right: 20px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
   height: 200px;
   // max-height: min((100vh - 96px)-60px, 734px);
   background: #fff;

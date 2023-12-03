@@ -1,17 +1,20 @@
 import React from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
+import {Link} from "react-router-dom";
 import "tippy.js/dist/tippy.css"; // optional
 
 import style from "./style_header.scss";
 const Styles = classNames.bind(style);
 function Header() {
-  const get_localStorage = JSON.parse(localStorage.getItem("searchs")); // lay du lieu tu localStorage ra
   const [search, set_count] = React.useState("");
-  const [searchs, set_counts] = React.useState(get_localStorage);
+  const [searchs, set_counts] = React.useState(() => {
+    const get_localStorage = JSON.parse(localStorage.getItem("searchs"));
+    return get_localStorage;
+  });
   const handlesubmit = () => {
     set_counts((e) => {
-      const new_search = [...e, search];
+      const new_search = (e && [...e, search]) ?? [search];
       const string = JSON.stringify(new_search);
       localStorage.setItem("searchs", string); // them vao localStorage de luu ket qua tim kiem
       return new_search;
@@ -50,7 +53,7 @@ function Header() {
                 type={Text}
                 placeholder="Nhập tên điện thoại, máy tính phụ kiện... cần tìm"
                 autoComplete="off"
-                // required
+                required
                 value={search}
                 onChange={(e) => set_count(e.target.value)}
               />
@@ -62,61 +65,61 @@ function Header() {
           </Tippy>
           <ul className={Styles("ul_header")}>
             <li className={Styles("infor")}>
-              <a href="">
+              <Link to="">
                 <i class="fas fa-file-alt icon  "></i>
 
                 <p>Thông tin hay</p>
-              </a>
+              </Link>
               <div className={Styles("box_infor")}>
                 <ul className={Styles("ul_boxinfor")}>
                   <li>
-                    <a href=""> Tin mới</a>
+                    <a to=""> Tin mới</a>
                   </li>
                   <li>
-                    <a href=""> Khuyến mãi</a>
+                    <a to=""> Khuyến mãi</a>
                   </li>
                   <li>
-                    <a href=""> Điện máy - Gia Dụng</a>
+                    <a to=""> Điện máy - Gia Dụng</a>
                   </li>
                   <li>
-                    <a href=""> Thủ Thuật</a>
+                    <a to=""> Thủ Thuật</a>
                   </li>
                   <li>
-                    <a href=""> For Gamers</a>
+                    <a to=""> For Gamers</a>
                   </li>
                   <li>
-                    <a href="">Video hot</a>
+                    <a to="">Video hot</a>
                   </li>
                   <li>
-                    <a href="">Đánh giá - Tư vấn</a>
+                    <a to="">Đánh giá - Tư vấn</a>
                   </li>
                   <li>
-                    <a href="">App - Game</a>
+                    <a to="">App - Game</a>
                   </li>
                   <li>
-                    <a href="">Sự Kiện</a>
+                    <a to="">Sự Kiện</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <a href="">
+              <Link to="">
                 <i class="fas fa-file-invoice-dollar icon"></i>
 
                 <p>Thanh toán & tiện ích</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="">
                 <i class="fas fa-user-circle icon"></i>
                 <p> Tài khoản của tôi</p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link to="">
                 <i class="fas fa-cart-arrow-down icon"></i>
                 <p>Giỏ hàng</p>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
