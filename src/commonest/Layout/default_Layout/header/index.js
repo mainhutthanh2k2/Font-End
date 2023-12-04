@@ -1,9 +1,13 @@
 import React from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
+
 import LoginModal from "~/commonest/modals/LoginModal";
 import { useSelector } from "react-redux";
 import _ from "lodash";
+
+import { Link } from "react-router-dom";
+import "tippy.js/dist/tippy.css"; // optional
 
 import "tippy.js/dist/tippy.css"; // optional
 import style from "./style_header.scss";
