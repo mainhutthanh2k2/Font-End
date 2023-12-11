@@ -6,7 +6,7 @@ import LoginModal from "~/commonest/modals/LoginModal";
 import { useSelector } from "react-redux";
 import _ from "lodash";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "tippy.js/dist/tippy.css"; // optional
 
 import "tippy.js/dist/tippy.css"; // optional
