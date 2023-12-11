@@ -5,7 +5,7 @@ const OtpAPI = {
         try {
             const res = await axios.get(`/send-email?email=${email}`);
 
-            if (res.status === 0) {
+            if (res && res.status === 0) {
                 return true;
             }
 

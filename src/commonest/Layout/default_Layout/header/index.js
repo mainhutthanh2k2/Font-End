@@ -3,7 +3,8 @@ import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 
 import LoginModal from "~/commonest/modals/LoginModal";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch  } from "react-redux";
+import { logout } from "~/store/slice/userSlice";
 import _ from "lodash";
 
 // import { Link } from "react-router-dom";
@@ -20,6 +21,7 @@ function Header() {
     const [searchs, set_counts] = React.useState(get_localStorage);
     const [showModal, setShowModal] = React.useState(false);
     const user = useSelector((state) => state.user.userInfo);
+    const dispatch = useDispatch();
 
     const handleCloseModal = () => setShowModal(false);
     const handleShowModal = () => setShowModal(true);
@@ -37,7 +39,11 @@ function Header() {
     const handleModalLogin = (e) => {
         e.preventDefault();
     };
-    console.log({ user });
+
+    const handleLogout = () => {
+
+    }
+    
     return (
         <header className={Styles("header_web_fpt")}>
             <div className={Styles("header_web_fpt_one")}>
@@ -124,6 +130,7 @@ function Header() {
                         </li>
                         <li>
                             <a
+                                className="user_container"
                                 href=""
                                 onClick={(e) => {
                                     handleModalLogin(e);
@@ -134,6 +141,14 @@ function Header() {
                             >
                                 <i class="fas fa-user-circle icon"></i>
                                 <p> {user?.name || "Tài khoản của tôi"}</p>
+                                { user && !_.isEmpty(user) && (
+                                    <ul className="user_option">
+                                        <li onClick={() => dispatch(logout())}>
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+                                            Đăng xuất
+                                        </li>
+                                    </ul>)
+                                }
                             </a>
                         </li>
                         <li>

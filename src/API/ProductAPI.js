@@ -14,7 +14,7 @@ const ProductAPI = {
 
             const res = await axios.get(`/product?${conditionStr}&limit=1`);
 
-            if (res.data.status === 0) {
+            if (res?.data?.status === 0) {
                 return res.data?.data[0];
             }
 
@@ -36,7 +36,7 @@ const ProductAPI = {
 
             const res = await axios.get(`/product?${conditionStr}`);
 
-            if (res.data.status === 0) {
+            if (res?.data?.status === 0) {
                 return res.data?.data;
             }
 
