@@ -7,6 +7,7 @@ import Promotion from "./Promotion/Promotion";
 import Outstanding_phone from "./Outstanding_phone/Outstanding_phone";
 import Laptops_sell_well from "./Laptops_sell_well/Laptops_sell_welll";
 import Table from "./Table_sell/Tablett";
+import Footer from "./Footer/footer";
 function defaultLayout({children}) {
   return (
     <React.Fragment>
@@ -17,6 +18,7 @@ function defaultLayout({children}) {
       <Outstanding_phone></Outstanding_phone>
       <Laptops_sell_well></Laptops_sell_well>
       <Table></Table>
+      <Footer></Footer>
       {/* <div className="container">{children}</div> */}
     </React.Fragment>
   );

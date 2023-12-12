@@ -18,18 +18,18 @@ function Outstanding_phone() {
                 <img src="	https://images.fpt.shop/unsafe/fit-in/540x420/filt…23/10/3/638319326499527430_frame-cate-270x210.png" />
               </div>
               <p className={Styles("infor_product")}>
-                <NavLink to="">
+                <NavLink to="/product">
                   <div className={Styles("name_productt")}>Name</div>
+                  <div className={Styles("price_product")}>Price</div>
+                  <div className={Styles("cdt-product__config__param")}>
+                    <span>sdsasdasdassda</span>
+                    <span>sdsdasdasdsads</span>
+                    <span>sds</span>
+                    <span>sds</span>
+                    <span>sds</span>
+                  </div>
                 </NavLink>
-                <div className={Styles("price_product")}>Price</div>
-                <div className={Styles("cdt-product__config__param")}>
-                  <span>sdsasdasdassda</span>
-                  <span>sdsdasdasdsads</span>
-                  <span>sds</span>
-                  <span>sds</span>
-                  <span>sds</span>
-                </div>
-                <NavLink to="" className={Styles("buy_now")}>
+                <NavLink to="/product" className={Styles("buy_now")}>
                   <span>Mua ngay</span>
                 </NavLink>
               </p>
@@ -55,7 +55,7 @@ function Outstanding_phone() {
                 </NavLink>
               </p>
             </div>
-             <div className={Styles("img_Promotion_children")}>
+            <div className={Styles("img_Promotion_children")}>
               <div className={Styles("hover_scale")}>
                 <img src="	https://images.fpt.shop/unsafe/fit-in/540x420/filt…23/10/3/638319326499527430_frame-cate-270x210.png" />
               </div>
