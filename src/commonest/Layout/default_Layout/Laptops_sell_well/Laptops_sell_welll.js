@@ -1,14 +1,18 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 import classNames from "classnames/bind";
 import style from "./Laptopss_sell_well.scss";
 const Styles = classNames.bind(style);
 function Laptops_sell_well() {
   return (
     <div className={Styles("Outstanding_laptop")}>
-      <div className={Styles("Outstanding_laptop_center")}>
-        <img src="https://images.fpt.shop/unsafe/filters:quality(90)…/Originals/2023/11/30/638369392838333568_html.png" />
-      </div>
+      <Tippy content="thanh" placement="top">
+        <div className={Styles("Outstanding_laptop_center")}>
+          <img src="https://images.fpt.shop/unsafe/filters:quality(90)…/Originals/2023/11/30/638369392838333568_html.png" />
+        </div>
+      </Tippy>
       <div className={Styles("Outstanding_phone_product")}>
         <div className={Styles("table_Outstanding_phone")}>
           <p className={Styles("phone_title")}>LAPTOP BÁN CHẠY</p>
@@ -43,13 +47,16 @@ function Laptops_sell_well() {
                   <div className={Styles("name_productt")}>Name</div>
                 </NavLink>
                 <div className={Styles("price_product")}>Price</div>
+
                 <div className={Styles("cdt-product__config__param")}>
                   <span>sdsasdasdassda</span>
+
                   <span>sdsdasdasdsads</span>
                   <span>sds</span>
                   <span>sds</span>
                   <span>sds</span>
                 </div>
+
                 <NavLink to="" className={Styles("buy_now")}>
                   <span>Mua ngay</span>
                 </NavLink>
@@ -65,7 +72,9 @@ function Laptops_sell_well() {
                 </NavLink>
                 <div className={Styles("price_product")}>Price</div>
                 <div className={Styles("cdt-product__config__param")}>
-                  <span>sdsasdasdassda</span>
+                  <Tippy content="thanh" placement="top">
+                    <span>thanh</span>
+                  </Tippy>
                   <span>sdsdasdasdsads</span>
                   <span>sds</span>
                   <span>sds</span>
