@@ -64,7 +64,10 @@ function LoginModal(props) {
                 <Modal.Body>
                     <div className="img" style={{ backgroundImage: `url(${img_otp})` }}></div>
                     <p className="text-center">Mã OTP đã được gửi đến email: {email || -1}</p>
-                    <span className="text_special" onClick={() => setModalStage(modalStages[0])}>
+                    <span className="text_special" onClick={() => {
+                        setModalStage(modalStages[0]);
+                        setOtp('');
+                    }}>
                         <i className="fa-regular fa-pen-to-square"></i>
                         Đổi email nhận mã
                     </span>
@@ -81,7 +84,10 @@ function LoginModal(props) {
                     <Button variant="danger" onClick={() => handleConfirmOTP()}>
                         Xác nhận
                     </Button>
-                    <span className="text_special" onClick={() => OtpAPI.sendOTP(email)}>
+                    <span className="text_special" onClick={() => {
+                        OtpAPI.sendOTP(email);
+                        setOtp('');
+                    }}>
                         Gửi lại mã OTP cho tôi
                     </span>
                 </Modal.Footer>
