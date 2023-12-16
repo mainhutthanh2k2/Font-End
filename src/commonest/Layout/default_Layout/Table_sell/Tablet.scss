@@ -1,23 +1,15 @@
 .Outstanding_Tablet {
   width: 1145px;
-  height: 625px;
-  margin: 0 auto;
-  background: white;
+  height: auto;
+  margin: 50px auto;
+  background-color: RGBA(248, 248, 255, 0.6);
 }
-.Outstanding_tablet_center,
-.Outstanding_phone_product {
-  margin: 20px 0 0 20px;
-}
+
 .Outstanding_tablet_center img {
   width: 1145px;
   height: 200px;
 }
-.table_Outstanding_phone {
-  margin-top: 20px;
-  width: 1145px;
-  height: auto;
-  background-color: #eeeeee;
-}
+
 .phone_title {
   padding: 20px 0px 0px 25px;
   font-family: "Times New Roman", Times, serif;
@@ -31,15 +23,16 @@
   width: 130px;
   height: 28px;
   border-radius: 15px;
-  background-color: #ef8573;
+  background-color: antiquewhite;
   text-align: center;
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
   overflow: hidden;
   z-index: 1;
-  color: #fff;
+  color: red;
 }
+
 .name_productt {
   font-size: 17px;
   font-weight: 700;

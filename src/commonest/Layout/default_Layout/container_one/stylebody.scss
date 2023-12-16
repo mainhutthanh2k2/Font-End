@@ -1,5 +1,5 @@
 .body_main {
-  width: 1145px;
+  width: 1160px;
   margin: 0 auto;
   height: 900px;
 }
@@ -9,22 +9,21 @@ img {
   background-size: contain;
 }
 .banner_body {
-  width: 1145px;
+  width: 1160px;
   height: 250px;
-  margin: 0px 0px 0px 20px;
 }
 .flex_banner {
+  margin-top: 15px;
   display: flex;
-  width: 1145px;
-  margin: 0px 0px 0px 20px;
+  width: 1160px;
 }
 .flex_banner_left {
-  width: 828px;
+  width: 70%;
   height: 300px;
   border: 1px solid #e3e3e3;
 }
 .flex_banner_right {
-  width: 310px;
+  width: 30%;
   height: 300px;
   border: 1px solid #e3e3e3;
   display: flex;
@@ -52,7 +51,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   width: 1145px;
-  margin: 0px 0px 0px 20px;
 }
 .img_product {
   width: 190px;

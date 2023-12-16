@@ -4,10 +4,13 @@ import "tippy.js/dist/tippy.css";
 import classNames from "classnames/bind";
 import {NavLink} from "react-router-dom";
 import stylee from "./style_product.scss";
+import Product from "~/API/ProductAPI";
+import _ from "lodash";
 const Styles = classNames.bind(stylee);
 function Alone_product() {
   var $ = document.querySelector.bind(document);
-  function seen_product() {// // sự kiện hiện trang sản phẩm
+  function seen_product() {
+    // // sự kiện hiện trang sản phẩm
     $(".seen_specifications").onclick = () => {
       $(".from_product").style.display = "block";
     };
@@ -306,7 +309,6 @@ function Alone_product() {
           <tr>
             <td
               className={Styles("seen_specifications")}
-              onClick={senn_procuct()}
               colsPan="2"
               style={{color: "blue", cursor: "pointer"}}
             >

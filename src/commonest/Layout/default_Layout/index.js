@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./header";
+import Header from "~/commonest/Layout/default_Layout/header/index";
 // import Hea from "~/commonest/Layout/commonents/Header"
 import MiddleBar from "./middle_bar/middle_bar";
 import Container_one from "./container_one/body";

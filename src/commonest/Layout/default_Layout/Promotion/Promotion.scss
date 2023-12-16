@@ -10,19 +10,16 @@ img {
   width: 100%;
 }
 .imgg {
-  width: 1145px;
+  width: 1160px;
   height: 70px;
   border-radius: 6px;
   border: 1px solid gray;
-  margin: 0px 0px 0px 20px;
 }
 .Promotion_hot {
   margin-top: 20px;
-  width: 1145px;
+  width: 1160px;
   height: auto;
-  background-color: #eeeeee;
-
-  margin: 0px 0px 0px 20px;
+  background-color: RGBA(248, 248, 255, 0.6);
 }
 .Promotion_hot p {
   font-size: 20px;
@@ -30,13 +27,17 @@ img {
   color: red;
   padding: 22px;
 }
+.price_productt {
+  color: red;
+}
 .fire {
   margin-right: 5px;
 }
 .img_Promotion {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  margin-left: 22px;
 }
 .img_Promotion_children {
   width: 275px;
@@ -46,15 +47,19 @@ img {
   background-color: white;
 }
 .hover_scale img {
-  width: 135px;
-  height: 100px;
+  width: 200px;
+  height: 162px;
   position: absolute;
-  inset: 60px 0px 7px 50px;
+  inset: 0px 0px 7px 18px;
+  transition: all 1s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 .img_Promotion_children p {
   color: black;
   position: absolute;
   top: 168px;
+  cursor: pointer;
 }
 .hover_scale {
   position: relative;
@@ -67,4 +72,14 @@ img {
 }
 .hover_scale:hover {
   transform: scale(1.03);
+}
+.price_productt {
+  border-radius: 7px;
+  padding: 6px;
+  color: red;
+  background: antiquewhite;
+  width: 130px;
+}
+.price_productt:hover {
+  opacity: 0.6;
 }

@@ -20,7 +20,7 @@ function Body_laptop() {
             src="https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg"
           />
         </div>
-        <div className={Styles("row ")}>
+        <div className={Styles("row_Tablet")}>
           <div className={Styles("left")}>
             <p>Hãng sản xuẩt</p>
             <ul>

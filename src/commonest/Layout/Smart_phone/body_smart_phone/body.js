@@ -4,6 +4,7 @@ import "tippy.js/dist/tippy.css";
 import classNames from "classnames/bind";
 import {NavLink} from "react-router-dom";
 import stylee from "./style_body.scss";
+import Apiproduct from "~/API/ProductAPI";
 const Styles = classNames.bind(stylee);
 function Body_smart_phone() {
   return (
@@ -20,7 +21,7 @@ function Body_smart_phone() {
             src="https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg"
           />
         </div>
-        <div className={Styles("row ")}>
+        <div className={Styles("row_SmartPhone")}>
           <div className={Styles("left")}>
             <p>Hãng sản xuẩt</p>
             <ul>
