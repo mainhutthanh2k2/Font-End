@@ -18,7 +18,6 @@ function Table_sell() {
     };
     Taplett().catch(console.error);
   }, []);
-
   return (
     <div className={Styles("Outstanding_Tablet")}>
       <div className={Styles("Outstanding_tablet_center")}>
