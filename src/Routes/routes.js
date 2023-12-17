@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import {
+  Default_Layout,
+  Smart_phone,
+  Laptop_Layout,
+  Tablet_Layout,
+  Alone_product,
+} from "~/commonest/Layout";
+import Home from "~/Pages/Home/home";
+import Smartphone from "~/Pages/Smart_phone/Smart_phone";
+import Laptop from "~/Pages/LapTop/Laptop";
+import Tablet from "~/Pages/Tablet/Tablet";
+=======
 import { HeaderOnly, Default_Layout, MainLayout } from "~/commonest/Layout";
 import Home from "~/Pages/Home/home";
 import Following from "~/Pages/Following/following";
@@ -10,31 +23,41 @@ import {
   CustomerManager,
 } from "~/Pages/Admin";
 
+>>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
 // public router
 const publicRouter = [
   {
     path: "/",
     component: Home,
+<<<<<<< HEAD
+=======
     layout: Default_Layout,
   },
   {
     path: "/following",
     component: Following,
+>>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
     layout: Default_Layout,
   },
   {
-    path: "/upload",
-    component: Upload,
+    path: "/smart_phone",
+    component: Smartphone,
+    layout: Smart_phone,
   },
   {
-    path: "/headerOnly",
-    component: Header,
-    layout: HeaderOnly,
+    path: "/laptop",
+    component: Laptop,
+    layout: Laptop_Layout,
   },
   {
-    path: "/search",
-    component: Search,
-    layout: Default_Layout,
+    path: "/tablet",
+    component: Tablet,
+    layout: Tablet_Layout,
+  },
+  {
+    path: "/product",
+    component: Alone_product,
+    layout: Alone_product,
   },
   {
     path: "/admin/product",
