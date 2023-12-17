@@ -14,7 +14,11 @@ function MiddleBar() {
       <div className={Styles("horizontal_menu_in")}>
         <ul className={Styles("ul_infor")}>
           <li className={Styles("phone")}>
+<<<<<<< HEAD
             <NavLink to="/smart_phone">
+=======
+            <NavLink to="/">
+>>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
               <i class="fas fa-mobile-alt phone_hover"></i>
               <span className={Styles("phone_hover")}>Điện thoại</span>
             </NavLink>
@@ -150,7 +154,11 @@ function MiddleBar() {
           </li>
           {/*  */}
           <li className={Styles("laptop_hover")}>
+<<<<<<< HEAD
             <NavLink to="/laptop">
+=======
+            <NavLink to="">
+>>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
               <i class="fas fa-laptop"></i>
               <span className={Styles("hover")}>Laptop</span>
             </NavLink>
@@ -311,7 +319,11 @@ function MiddleBar() {
             </div>
           </li>
           <li className={Styles("manufacturer_hover")}>
+<<<<<<< HEAD
             <NavLink to="/tablet">
+=======
+            <NavLink to="">
+>>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
               <i class="fas fa-tablet-alt"></i>
               <span className={Styles("hover")}>Máy Tính Bảng</span>
             </NavLink>

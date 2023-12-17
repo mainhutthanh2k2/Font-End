@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import axios from "axios";
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
@@ -242,4 +243,16 @@ function Footer() {
     </footer>
   );
 }
+=======
+import {NavLink} from "react-router-dom";
+import classNames from "classnames/bind";
+import style from "./Tablet.scss";
+const Styles = classNames.bind(style);
+function Footer() {
+  return <React.Fragment>
+    
+  </React.Fragment>;
+}
+
+>>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
 export default Footer;
