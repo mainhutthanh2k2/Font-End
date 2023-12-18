@@ -1,20 +1,12 @@
 import React from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
-<<<<<<< HEAD
 
 import LoginModal from "~/commonest/modals/LoginModal";
-import {useSelector, useDispatch} from "react-redux";
-import {logout} from "~/store/slice/userSlice";
-import _ from "lodash";
-=======
 import { useSelector, useDispatch } from "react-redux";
-import _ from "lodash";
 import { NavLink } from "react-router-dom";
-
-import LoginModal from "~/commonest/modals/LoginModal";
 import { logout } from "~/store/slice/userSlice";
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
+import _ from "lodash";
 
 // import { Link } from "react-router-dom";
 import "tippy.js/dist/tippy.css"; // optional
@@ -49,11 +41,6 @@ function Header() {
     e.preventDefault();
   };
 
-<<<<<<< HEAD
-  const handleLogout = () => {};
-
-=======
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
   return (
     <header className={Styles("header_web_fpt")}>
       <div className={Styles("header_web_fpt_one")}>
@@ -87,33 +74,21 @@ function Header() {
                 type={Text}
                 placeholder="Nhập tên điện thoại, máy tính phụ kiện... cần tìm"
                 autoComplete="off"
-<<<<<<< HEAD
                 required
-=======
-                // required
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
                 value={search}
                 onChange={(e) => set_count(e.target.value)}
               />
 
               <button className={Styles("button")} onClick={handlesubmit}>
-<<<<<<< HEAD
-                <i class="fas fa-search"></i>
-=======
                 <i className="fas fa-search"></i>
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
               </button>
             </form>
           </Tippy>
           <ul className={Styles("ul_header")}>
             <li className={Styles("infor")}>
               <a href="">
-<<<<<<< HEAD
-                <i className={Styles("fas fa-file-alt icon")}></i>
-=======
                 <i className="fas fa-file-alt icon  "></i>
 
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
                 <p>Thông tin hay</p>
               </a>
               <div className={Styles("box_infor")}>
@@ -150,11 +125,7 @@ function Header() {
             </li>
             <li>
               <a href="">
-<<<<<<< HEAD
-                <i class="fas fa-file-invoice-dollar icon"></i>
-=======
                 <i className="fas fa-file-invoice-dollar icon"></i>
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
 
                 <p>Thanh toán & tiện ích</p>
               </a>
@@ -170,14 +141,6 @@ function Header() {
                   }
                 }}
               >
-<<<<<<< HEAD
-                <i class="fas fa-user-circle icon"></i>
-                <p> {user?.name || "Tài khoản của tôi"}</p>
-                {user && !_.isEmpty(user) && (
-                  <ul className="user_option">
-                    <li onClick={() => dispatch(logout())}>
-                      <i class="fa-solid fa-right-from-bracket"></i>
-=======
                 <i className="fas fa-user-circle icon"></i>
                 <p> {user?.name || "Tài khoản của tôi"}</p>
                 {user && !_.isEmpty(user) && (
@@ -192,7 +155,6 @@ function Header() {
                     )}
                     <li onClick={() => dispatch(logout())}>
                       <i className="fa-solid fa-right-from-bracket"></i>
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
                       Đăng xuất
                     </li>
                   </ul>
@@ -201,11 +163,7 @@ function Header() {
             </li>
             <li>
               <a href="">
-<<<<<<< HEAD
-                <i class="fas fa-cart-arrow-down icon"></i>
-=======
                 <i className="fas fa-cart-arrow-down icon"></i>
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
                 <p>Giỏ hàng</p>
               </a>
             </li>

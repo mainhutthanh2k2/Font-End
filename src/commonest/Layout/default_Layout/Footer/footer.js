@@ -1,8 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
 import axios from "axios";
-import {NavLink} from "react-router-dom";
-import {useState} from "react";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import classNames from "classnames/bind";
 import stylee from "./Stylefooter.scss";
 const Styles = classNames.bind(stylee);
@@ -29,12 +28,14 @@ function Footer() {
         background: "white",
       }}
     >
-      <div style={{width: "1145px", margin: "15px auto"}}>
+      <div style={{ width: "1145px", margin: "15px auto" }}>
         {/* <button onClick={api}>Click</button>
         {a ? <p style={{background: "white", color: "red"}}>{a}</p> : null} */}
-        <div style={{background: "orange", width: "auto", height: "3px"}}></div>
-        <div style={{margin: "5px 0 0 50px "}}>
-          <p style={{fontWeight: "700"}}>
+        <div
+          style={{ background: "orange", width: "auto", height: "3px" }}
+        ></div>
+        <div style={{ margin: "5px 0 0 50px " }}>
+          <p style={{ fontWeight: "700" }}>
             MUA HÀNG CHÍNH HÃNG TỪ CÁC THƯƠNG HIỆU LỚN VỚI FPT
           </p>
           <p>
@@ -51,9 +52,9 @@ function Footer() {
             an toàn. Một vấn đề nữa khiến cho các khách hàng luôn quan tâm đó
             chính là mua hàng trên FPT có đảm bảo không.
           </p>
-          <p style={{fontWeight: "700"}}>TOP TỪ KHÓA XU HƯỚNG</p>
-          <ul style={{display: "flex"}}>
-            <li style={{color: "black"}}>
+          <p style={{ fontWeight: "700" }}>TOP TỪ KHÓA XU HƯỚNG</p>
+          <ul style={{ display: "flex" }}>
+            <li style={{ color: "black" }}>
               <NavLink href="">Iphone</NavLink>|
               <NavLink href="">Iphone 14</NavLink>|
               <NavLink href="">Iphone 15</NavLink>|
@@ -69,7 +70,7 @@ function Footer() {
         </div>
         <div className="ull">
           <div
-            style={{background: "orange", width: "auto", height: "1px"}}
+            style={{ background: "orange", width: "auto", height: "1px" }}
           ></div>
           <div
             style={{
@@ -79,9 +80,9 @@ function Footer() {
               margin: "15px 0 0 0",
             }}
           >
-            <div style={{fontSize: ".75rem", fontWeight: "700"}}>
+            <div style={{ fontSize: ".75rem", fontWeight: "700" }}>
               CHĂM SÓC KHÁCH HÀNG
-              <ul style={{paddingLeft: "0"}}>
+              <ul style={{ paddingLeft: "0" }}>
                 <li>Trung Tâm Trợ Giúp</li>
                 <li>Vận Chuyển</li>
                 <li>Trả Hàng & Hoàn Tiền</li>
@@ -89,9 +90,9 @@ function Footer() {
                 <li>Chính Sách Bảo Hành</li>
               </ul>
             </div>
-            <div style={{fontSize: ".75rem", fontWeight: "700"}}>
+            <div style={{ fontSize: ".75rem", fontWeight: "700" }}>
               Về Iphone Store
-              <ul style={{paddingLeft: "0"}}>
+              <ul style={{ paddingLeft: "0" }}>
                 <li>Giới Thiệu Về Iphone Store Việt Nam</li>
                 <li>Tuyển Dụng</li>
                 <li>Chính Hãng</li>
@@ -99,9 +100,9 @@ function Footer() {
                 <li>Liên Hệ Với Truyền Thông</li>
               </ul>
             </div>
-            <div style={{fontSize: ".75rem", fontWeight: "700"}}>
+            <div style={{ fontSize: ".75rem", fontWeight: "700" }}>
               THANH TOÁN
-              <ul style={{paddingLeft: "0"}}>
+              <ul style={{ paddingLeft: "0" }}>
                 <li>
                   <img
                     src="https://down-vn.img.susercontent.com/file/0217f1d345587aa0a300e69e2195c492
@@ -111,7 +112,7 @@ function Footer() {
                   <img
                     src="	https://down-vn.img.susercontent.com/file/9263fa8c83628f5deff55e2a90758b06
                       "
-                    style={{maxHeight: "100%", maxWidth: "100%"}}
+                    style={{ maxHeight: "100%", maxWidth: "100%" }}
                     alt=""
                   />
                   <div
@@ -134,14 +135,14 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div style={{fontSize: ".75rem", fontWeight: "700"}}>
+            <div style={{ fontSize: ".75rem", fontWeight: "700" }}>
               THEO DÕI CHÚNG TÔI TRÊN
-              <div style={{display: "flex", margin: "5px 0 0 0"}}>
+              <div style={{ display: "flex", margin: "5px 0 0 0" }}>
                 <img
                   src="https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472"
                   alt=""
                 />
-                <ul style={{paddingleft: "8px"}}>
+                <ul style={{ paddingleft: "8px" }}>
                   <li>
                     <img
                       src="	https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163"
@@ -149,7 +150,11 @@ function Footer() {
                     />
                   </li>
                   <div
-                    style={{background: "black", width: "auto", height: "1px"}}
+                    style={{
+                      background: "black",
+                      width: "auto",
+                      height: "1px",
+                    }}
                   ></div>
 
                   <li>
@@ -160,13 +165,19 @@ function Footer() {
                     />
                   </li>
                   <div
-                    style={{background: "black", width: "auto", height: "1px"}}
+                    style={{
+                      background: "black",
+                      width: "auto",
+                      height: "1px",
+                    }}
                   ></div>
                 </ul>
               </div>
             </div>
           </div>
-          <div style={{background: "gray", width: "auto", height: "1px"}}></div>
+          <div
+            style={{ background: "gray", width: "auto", height: "1px" }}
+          ></div>
 
           <div
             style={{
@@ -183,16 +194,20 @@ function Footer() {
                 justifycontent: "space-around",
               }}
             >
-              <div style={{color: "rgba(0,0,0,.54)", margin: "20px 0 0 50px"}}>
+              <div
+                style={{ color: "rgba(0,0,0,.54)", margin: "20px 0 0 50px" }}
+              >
                 CHÍNH SÁCH BẢO MẬT
               </div>
-              <div style={{color: "rgba(0,0,0,.54)", margin: "20px 0 0 0"}}>
+              <div style={{ color: "rgba(0,0,0,.54)", margin: "20px 0 0 0" }}>
                 QUY CHẾ HOẠT ĐỘNG
               </div>
-              <div style={{color: "rgba(0,0,0,.54)", margin: "20px 0 0 0"}}>
+              <div style={{ color: "rgba(0,0,0,.54)", margin: "20px 0 0 0" }}>
                 CHÍNH SÁCH VẬN CHUYỂN
               </div>
-              <div style={{color: "rgba(0,0,0,.54)", margin: "20px 50px 0 0"}}>
+              <div
+                style={{ color: "rgba(0,0,0,.54)", margin: "20px 50px 0 0" }}
+              >
                 CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN
               </div>
             </div>
@@ -203,17 +218,17 @@ function Footer() {
                 justifycontent: "space-around",
               }}
             >
-              <ul style={{margin: "15px auto"}}>
+              <ul style={{ margin: "15px auto" }}>
                 <li>
                   <img
                     src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png
                       "
-                    style={{width: "161px", height: "55px"}}
+                    style={{ width: "161px", height: "55px" }}
                   />
                   <img
                     src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png
                     "
-                    style={{width: "161px", height: "55px"}}
+                    style={{ width: "161px", height: "55px" }}
                     alt=""
                   />
                 </li>
@@ -243,16 +258,4 @@ function Footer() {
     </footer>
   );
 }
-=======
-import {NavLink} from "react-router-dom";
-import classNames from "classnames/bind";
-import style from "./Tablet.scss";
-const Styles = classNames.bind(style);
-function Footer() {
-  return <React.Fragment>
-    
-  </React.Fragment>;
-}
-
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
 export default Footer;

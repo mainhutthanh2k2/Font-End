@@ -1,8 +1,7 @@
 import classNames from "classnames/bind";
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Promotion.scss";
-<<<<<<< HEAD
 import Api_product from "~/API/ProductAPI";
 const Styles = classNames.bind(styles);
 function Promotion() {
@@ -16,11 +15,6 @@ function Promotion() {
     product_hoot().catch(console.error);
   }, []);
 
-=======
-const Styles = classNames.bind(styles);
-function Promotion() {
-  // className={Styles("Promotion_main")}
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
   return (
     <React.Fragment>
       <div className={Styles("Promotion_main")}>
@@ -37,7 +31,6 @@ function Promotion() {
             <span>KHUYẾN MÃI HOT </span>
           </p>
           <div className={Styles("img_Promotion")}>
-<<<<<<< HEAD
             {product_hot &&
               product_hot.length > 0 &&
               product_hot.map((e, index) => {
@@ -60,44 +53,6 @@ function Promotion() {
                   </div>
                 );
               })}
-=======
-            <div className={Styles("img_Promotion_children")}>
-              <div className={Styles("hover_scale")}>
-                <img src="	https://images.fpt.shop/unsafe/fit-in/540x420/filt…23/10/3/638319326499527430_frame-cate-270x210.png" />
-              </div>
-              <p>
-                <div>Name</div>
-                <div>Price</div>
-              </p>
-            </div>
-            <div className={Styles("img_Promotion_children")}>
-              <div className={Styles("hover_scale")}>
-                <img src="	https://images.fpt.shop/unsafe/fit-in/540x420/filt…23/10/3/638319326499527430_frame-cate-270x210.png" />
-              </div>
-              <p>
-                <div>Name</div>
-                <div>Price</div>
-              </p>
-            </div>
-            <div className={Styles("img_Promotion_children")}>
-              <div className={Styles("hover_scale")}>
-                <img src="	https://images.fpt.shop/unsafe/fit-in/540x420/filt…23/10/3/638319326499527430_frame-cate-270x210.png" />
-              </div>
-              <p>
-                <div>Name</div>
-                <div>Price</div>
-              </p>
-            </div>
-            <div className={Styles("img_Promotion_children")}>
-              <div className={Styles("hover_scale")}>
-                <img src="	https://images.fpt.shop/unsafe/fit-in/540x420/filt…23/10/3/638319326499527430_frame-cate-270x210.png" />
-              </div>
-              <p>
-                <div>Name</div>
-                <div>Price</div>
-              </p>
-            </div>
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
           </div>
         </div>
       </div>

@@ -1,18 +1,15 @@
-<<<<<<< HEAD
 import {
   Default_Layout,
   Smart_phone,
   Laptop_Layout,
   Tablet_Layout,
   Alone_product,
+  MainLayout,
 } from "~/commonest/Layout";
 import Home from "~/Pages/Home/home";
 import Smartphone from "~/Pages/Smart_phone/Smart_phone";
 import Laptop from "~/Pages/LapTop/Laptop";
 import Tablet from "~/Pages/Tablet/Tablet";
-=======
-import { HeaderOnly, Default_Layout, MainLayout } from "~/commonest/Layout";
-import Home from "~/Pages/Home/home";
 import Following from "~/Pages/Following/following";
 import Upload from "~/Pages/upload/upload";
 import Header from "~/Pages/HeaderOnly/headerOnly";
@@ -23,20 +20,16 @@ import {
   CustomerManager,
 } from "~/Pages/Admin";
 
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
 // public router
 const publicRouter = [
   {
     path: "/",
     component: Home,
-<<<<<<< HEAD
-=======
     layout: Default_Layout,
   },
   {
     path: "/following",
     component: Following,
->>>>>>> 1ff7c3981c6692c9f047e4f2ccb5c2e18d605b6d
     layout: Default_Layout,
   },
   {
@@ -55,7 +48,7 @@ const publicRouter = [
     layout: Tablet_Layout,
   },
   {
-    path: "/product",
+    path: "/product:id",
     component: Alone_product,
     layout: Alone_product,
   },
